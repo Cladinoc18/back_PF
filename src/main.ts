@@ -13,7 +13,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: 'https://proyecto-final-kvxa.vercel.app',
+    origin: [
+    'https://proyecto-final-kvxa.vercel.app', 
+    'http://localhost:3001',
+    'https://back-pf-k04z.onrender.com',
+  ],
     methods: 'GET, PATCH, HEAD, PUT, POST, DELETE',
     credentials: true,
   });
