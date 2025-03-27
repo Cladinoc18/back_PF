@@ -17,7 +17,9 @@ const config = {
   synchronize: true,
   //dropSchema: true,
   // logging: true,
-  ssl:true,
+  ssl: {
+    rejectUnauthorized: false,
+  },
   entities: ['dist/**/*.entity{.ts,.js}'],
   migrations: ['dist/migration/*{.ts,.js}']
 }
